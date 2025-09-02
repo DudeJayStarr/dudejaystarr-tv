@@ -12,54 +12,92 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url("fog.jpg") no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       color: white;
       text-align: center;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      overflow: hidden;
     }
     .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.75);
       padding: 40px;
-      border-radius: 15px;
+      border-radius: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 25px rgba(0,255,200,0.4);
+      animation: fadeIn 1.5s ease-in-out;
     }
     img {
-      width: 200px;
-      border-radius: 10px;
+      width: 160px;
+      border-radius: 15px;
     }
     h1 {
       margin-top: 20px;
       font-size: 2.5rem;
       letter-spacing: 2px;
+      color: #00e6ff;
     }
     p {
       font-size: 1.2rem;
-      margin: 10px 0 20px;
+      margin: 10px 0 30px;
+      color: #ccc;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
     .links a {
-      margin: 0 10px;
-      padding: 10px 20px;
-      background: #ff0057;
-      color: white;
-      border-radius: 5px;
+      padding: 12px 20px;
+      background: #00e6ff;
+      color: #111;
+      border-radius: 8px;
       text-decoration: none;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.3s ease;
     }
     .links a:hover {
-      background: #ff3377;
+      background: #00b3cc;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    /* Subtle animated matrix-style background */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url("https://i.ibb.co/zP9RZkW/matrix.gif") repeat;
+      opacity: 0.15;
+      z-index: -1;
     }
   </style>
 </head>
 <body>
   <div class="overlay">
     <img src="logo.jpeg" alt="DudeJayStarr Logo">
-    <h1>Welcome to DudeJayStarr.TV</h1>
-    <p>Streaming • Gaming • Content Creation</p>
+    <h1>DudeJayStarr.TV</h1>
+    <p>AI-Driven Cybersecurity • Streaming • Content Creation</p>
+    
     <div class="links">
+      <!-- Content -->
       <a href="https://www.youtube.com/@DudeJayStarr" target="_blank">YouTube</a>
       <a href="https://www.twitch.tv/dudejaystarr" target="_blank">Twitch</a>
       <a href="https://kick.com/dudejaystarr" target="_blank">Kick</a>
+      <a href="https://substack.com/@dudejaystarr" target="_blank">Substack</a>
+      
+      <!-- Professional -->
       <a href="https://www.linkedin.com/in/dudejaystarr/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/DudeJayStarr" target="_blank">GitHub</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
+      <a href="https://www.credly.com/users/dudejaystarr" target="_blank">Certifications</a>
+      
+      <!-- Community -->
+      <a href="https://discord.gg/yourinvite" target="_blank">Discord</a>
+      <a href="https://www.paypal.com/paypalme/DudeJayStarr" target="_blank">Donate</a>
+      <a href="mailto:mdzink13@gmail.com">Email</a>
     </div>
   </div>
 </body>
